@@ -1,12 +1,10 @@
 # Package Overview
 
-This package provides a simple function to print "Hello, World!" to the command line. Additionally, you can provide a name to the function to print a personalized greeting.
-
-(Note: For this example, we are assuming the organization name is `user` and the package name is `socialMedia`.)
+The `user/socialMedia` package provides a simple utility function to print "Hello, World!" to the command line. Additionally, it supports personalized greetings by accepting an optional name parameter.
 
 ## Functionality
 
-### hello Function
+The `hello` function is the primary utility provided by this package. It accepts an optional `string` parameter and returns a greeting message as a `string`.
 
 ```ballerina
 public function hello(string? name) returns string {
@@ -17,15 +15,25 @@ public function hello(string? name) returns string {
 }
 ```
 
+### Parameters
+
+- name (string?): An optional name to include in the greeting. If not provided, the default greeting is returned.
+
+### Returns
+
+- string: A greeting message, either personalized (e.g., "Hello, Ballerina") or the default "Hello, World!".
+
 ## Build from Source and Publish
 
 ### Build the Package
 
-To build the package, use the following command:
+To build the package locally, execute the following command in the terminal:
 
 ```bash
 bal pack
 ```
+
+This command compiles the package and prepares it for use or distribution.
 
 ### Publish the Package
 
@@ -37,23 +45,20 @@ bal push --repository=local
 
 ## Usage
 
-### Importing the Package
+To use the user/socialMedia package in your Ballerina project, import it along with the ballerina/io module for output handling.
+(Note: For this example, we are assuming the organization name is `user` and the package name is `socialMedia`.)
 
 ```ballerina
 import ballerina/io;
 import user/socialMedia;
-```
 
-### Using the hello Function
-
-```ballerina
 public function main() {
     string greeting = socialMedia:hello("Ballerina");
     io:println(greeting); // Output: Hello, Ballerina
 }
 ```
 
-You can call the `hello` function without any arguments to get the default greeting:
+The `hello` function can be called without any arguments to get the default greeting:
 
 ```ballerina
 public function main() {
