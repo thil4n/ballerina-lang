@@ -1,6 +1,6 @@
 # Package Overview
 
-The `user/socialMedia` package provides a simple utility function to print "Hello, World!" to the command line. Additionally, it supports personalized greetings by accepting an optional name parameter.
+This package provides a simple utility function to print "Hello, World!" to the command line. It also supports personalized greetings by optionally accepting a name.
 
 ## Functionality
 
