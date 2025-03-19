@@ -2,27 +2,6 @@
 
 This package provides a simple utility function to print "Hello, World!" to the command line. It also supports personalized greetings by optionally accepting a name.
 
-## Functionality
-
-The `hello` function is the primary utility provided by this package. It accepts an optional `string` parameter and returns a greeting message as a `string`.
-
-```ballerina
-public function hello(string? name) returns string {
-    if name !is () {
-        return string `Hello, ${name}`;
-    }
-    return "Hello, World!";
-}
-```
-
-### Parameters
-
-- name (string?): An optional name to include in the greeting. If not provided, the default greeting is returned.
-
-### Returns
-
-- string: A greeting message, either personalized (e.g., "Hello, Ballerina") or the default "Hello, World!".
-
 ## Build from Source and Publish
 
 ### Build the Package
